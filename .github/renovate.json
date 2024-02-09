@@ -1,0 +1,26 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"assignees": [
+		"HMBSbige"
+	],
+	"commitMessagePrefix": "dep:",
+	"dependencyDashboard": false,
+	"extends": [
+		"config:base",
+		":automergeBranch",
+		":automergeDigest",
+		":automergeMinor",
+		":disableRateLimiting"
+	],
+	"packageRules": [
+		{
+			"matchPackagePrefixes": [
+				"Volo.Abp"
+			],
+			"groupName": "ABP"
+		}
+	],
+	"labels": [
+		"Automatic"
+	]
+}
