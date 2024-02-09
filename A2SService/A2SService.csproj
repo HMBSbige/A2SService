@@ -15,8 +15,13 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Description>Steam game server impl</Description>
+  <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+    
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
     <PackageReference Include="System.Reactive" Version="6.0.0" />
