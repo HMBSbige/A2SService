@@ -60,11 +60,16 @@ public class A2SServer(EndPoint local) : IDisposable
 
 		while (true)
 		{
-			UdpReceiveResult message = await Server.ReceiveAsync(cancellationToken);
+			try
+			{
+				UdpReceiveResult message = await Server.ReceiveAsync(cancellationToken);
 
-#pragma warning disable CA2012
-			_ = HandleAsync(message, cancellationToken);
-#pragma warning restore CA2012
+				ValueTask _ = HandleAsync(message, cancellationToken);
+			}
+			catch (Exception) when (!cancellationToken.IsCancellationRequested)
+			{
+
+			}
 		}
 		// ReSharper disable once FunctionNeverReturns
 	}
