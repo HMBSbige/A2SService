@@ -1,8 +1,8 @@
-FROM mcr.microsoft.com/dotnet/runtime:8.0-cbl-mariner-distroless AS base
+FROM mcr.microsoft.com/dotnet/runtime:8.0-jammy-chiseled AS base
 USER app
 WORKDIR /app
 
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0-cbl-mariner AS build
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0-jammy AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY . .
