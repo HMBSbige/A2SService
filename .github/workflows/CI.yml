@@ -19,7 +19,6 @@ jobs:
         run: dotnet format -v diag --verify-no-changes
 
   test:
-    needs: [check_format]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
