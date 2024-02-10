@@ -3,6 +3,10 @@
   <Import Project="..\common.props" />
 
   <PropertyGroup>
+    <IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <Copyright>Copyright © 2024 HMBSbige</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/HMBSbige/A2SService</PackageProjectUrl>
