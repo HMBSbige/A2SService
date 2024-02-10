@@ -21,5 +21,5 @@ services:
          - A2SGame=Genshin Impact
          - A2SMaxPlayers=255
          - A2SVisibility=Private
-         - A2SA2SVacStatus=1
+         - A2SVac=1
 ```
