@@ -94,7 +94,7 @@ jobs:
       - name: Build
         uses: docker/build-push-action@v5
         with:
-          push: true
+          push: ${{ github.ref_name == 'master' }}
           tags: ghcr.io/${{ env.Owner }}/${{ env.ProjectName }}:master
           platforms: linux/amd64,linux/arm64
 
