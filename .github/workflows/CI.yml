@@ -92,14 +92,14 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           push: ${{ github.ref_name == 'master' }}
           tags: ghcr.io/${{ env.Owner }}/${{ env.ProjectName }}:master
           platforms: linux/amd64,linux/arm64
 
       - name: Push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/') }}
         with:
           push: true
