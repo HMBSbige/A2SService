@@ -12,7 +12,7 @@
     <PackageReference Include="MSTest.TestAdapter" Version="3.8.3" />
     <PackageReference Include="MSTest.TestFramework" Version="3.8.3" />
     <PackageReference Include="coverlet.collector" Version="6.0.4" PrivateAssets="all" />
-    <PackageReference Include="SteamQuery.NET" Version="1.1.5" />
+    <PackageReference Include="SteamQuery.NET" Version="2.0.1" />
   </ItemGroup>
 
   <ItemGroup>
